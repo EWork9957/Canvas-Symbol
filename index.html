@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE-Edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Canvas & SVG</title>
+    </head>
+    <body>
+        <h1>CANVAS</h1>
+        <script>
+            window.onload = function(){ 
+                var canvas = document.getElementById("myCanvas");
+                var ctx = canvas.getContext("2d");
+//BORDER~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                //OUTLINE
+                ctx.lineWidth = 5; 
+                ctx.beginPath(); 
+                ctx.arc(60, 60, 40, 1 * Math.PI, 1.5 * Math.PI, false);
+                ctx.lineTo(640, 20);
+                ctx.arc(640, 60, 40, 1.5 * Math.PI, 0 * Math.PI, false);
+                ctx.lineTo(680, 440);
+                ctx.arc(640, 440, 40, 0 * Math.PI, 0.5 * Math.PI, false);
+                ctx.lineTo(60, 480);
+                ctx.arc(60, 440, 40, 0.5 * Math.PI, 1 * Math.PI, false);
+                ctx.lineTo(20, 60);
+                ctx.stroke();
+                //BORDER
+                ctx.lineWidth = 5; 
+                ctx.beginPath();
+                ctx.arc(60, 60, 20, 1 * Math.PI, 1.5 * Math.PI, false);
+                ctx.arc(140, 60, 20, 1.5 * Math.PI, 0 * Math.PI, false);
+                ctx.arc(170, 115, 10, 1 * Math.PI, 0 * Math.PI, true);
+                ctx.arc(200, 60, 20, 1 * Math.PI, 1.5 * Math.PI, false);
+                ctx.arc(480, 60, 20, 1.5 * Math.PI, 0 * Math.PI, false);
+                ctx.arc(510, 115, 10, 1 * Math.PI, 0 * Math.PI, true);
+                ctx.arc(540, 60, 20, 1 * Math.PI, 1.5 * Math.PI, false);
+                ctx.arc(640, 60, 20, 1.5 * Math.PI, 0 * Math.PI, false);
+                ctx.arc(640, 440, 20, 0 * Math.PI, .5 * Math.PI, false);
+                ctx.arc(540, 440, 20, .5 * Math.PI, 1 * Math.PI, false);
+                ctx.arc(510, 385, 10, 0 * Math.PI, 1 * Math.PI, true);
+                ctx.arc(480, 440, 20, 0 * Math.PI, .5 * Math.PI, false);
+                ctx.arc(200, 440, 20, .5 * Math.PI, 1 * Math.PI, false);
+                ctx.arc(170, 385, 10, 0 * Math.PI, 1 * Math.PI, true);
+                ctx.arc(140, 440, 20, 0 * Math.PI, .5 * Math.PI, false);
+                ctx.arc(60, 440, 20, 0.5 * Math.PI, 1 * Math.PI, false);
+                ctx.lineTo(40, 60);
+                //TOP CENTER
+                ctx.moveTo(420, 105);
+                ctx.arc(260, 115, 10, 1.5 * Math.PI, .5 * Math.PI, true);
+                ctx.arc(420, 115, 10, .5 * Math.PI, 1.5 * Math.PI, true);
+                //BOTTOM CENTER
+                ctx.moveTo(420, 375);
+                ctx.arc(260, 385, 10, 1.5 * Math.PI, .5 * Math.PI, true);
+                ctx.arc(420, 385, 10, .5 * Math.PI, 1.5 * Math.PI, true);
+                //CENTER
+                ctx.moveTo(420, 315);
+                ctx.arc(420, 305, 10, .5 * Math.PI, 2 * Math.PI, true);
+                ctx.arc(420, 195, 10, 2 * Math.PI, 1.5 * Math.PI, true);
+                ctx.arc(370, 195, 10, 1.5 * Math.PI, .5 * Math.PI, true);
+                ctx.arc(405, 210, 5, 1.5 * Math.PI, 2 * Math.PI, false);
+                ctx.arc(405, 290, 5, 2 * Math.PI, .5 * Math.PI, false);
+                ctx.arc(275, 290, 5, .5 * Math.PI, 1 * Math.PI, false);
+                ctx.arc(275, 210, 5, 1 * Math.PI, 1.5 * Math.PI, false);
+                ctx.arc(310, 195, 10, .5 * Math.PI, 1.5 * Math.PI, true);
+                ctx.arc(260, 195, 10, 1.5 * Math.PI, 1 * Math.PI, true);
+                ctx.arc(260, 305, 10, 1 * Math.PI, .5 * Math.PI, true);
+                ctx.lineTo(420, 315);
+                //RIGHT TOP L
+                ctx.moveTo(510, 185);
+                ctx.arc(510, 195, 10, 1.5 * Math.PI, .5 * Math.PI, true);
+                ctx.arc(590, 195, 10, .5 * Math.PI, 2 * Math.PI, true);
+                ctx.arc(590, 115, 10, 2 * Math.PI, 1 * Math.PI, true);
+                ctx.arc(575, 180, 5, 2 * Math.PI, .5 * Math.PI, false);
+                ctx.lineTo(510, 185);
+                //RIGHT BOTTOM L
+                ctx.moveTo(510, 295);
+                ctx.arc(510, 305, 10, 1.5 * Math.PI, .5 * Math.PI, true);
+                ctx.arc(575, 320, 5, 1.5 * Math.PI, 2 * Math.PI, false);
+                ctx.arc(590, 385, 10, 1 * Math.PI, 2 * Math.PI, true);
+                ctx.arc(590, 305, 10, 2 * Math.PI, 1.5 * Math.PI, true);
+                ctx.lineTo(510, 295);
+                //LEFT TOP L
+                ctx.moveTo(170, 185);
+                ctx.arc(170, 195, 10, 1.5 * Math.PI, .5 * Math.PI, false);
+                ctx.arc(110, 195, 10, .5 * Math.PI, 1 * Math.PI, false);
+                ctx.arc(110, 115, 10, 1 * Math.PI, 2 * Math.PI, false);
+                ctx.arc(125, 180, 5, 1 * Math.PI, .5 * Math.PI, true);
+                ctx.lineTo(170, 185);
+                //LEFT BOTTOM L
+                ctx.moveTo(170, 295);
+                ctx.arc(170, 305, 10, 1.5 * Math.PI, .5 * Math.PI, false);
+                ctx.arc(125, 320, 5, 1.5 * Math.PI, 1 * Math.PI, true);
+                ctx.arc(110, 385, 10, 2 * Math.PI, 1 * Math.PI, false);
+                ctx.arc(110, 305, 10, 1 * Math.PI, 1.5 * Math.PI, false);
+                ctx.lineTo(170, 295);
+                //STROKE
+                ctx.stroke();            
+//PACMAN~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                ctx.beginPath();
+                ctx.arc(140, 250, 20, Math.PI / 7, -Math.PI / 7, false);
+                ctx.lineTo(137, 250);
+                ctx.fill();            };
+        </script>
+        <canvas id="myCanvas" width="700" height="500" style="border: 1px solid black";></canvas>
+        <h1>SVG</h1>
+        <div class="SVG">
+            <svg width="700" height="700">
+<!--Sky-->
+                <rect width="700" height="700" style="fill:rgb(214,238,240);"/>
+<!--Water-->
+                <rect x="0" y="350" width="700" height="350" style="fill:rgb(106,219,198);"/>
+<!--Sun-->
+                <circle cx="550" cy="125" r="65" stroke-width="3" fill="rgb(255,230,46)" />
+<!--Beach-->
+                <ellipse cx="670" cy="600" rx="600" ry="175" style="fill:rgb(255,221,125);" />
+<!--Clouds-->
+                <path stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-width="50" d="M80 50 l140 0"/>
+                <path stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-width="50" d="M190 75 l75 0"/>
+                <path stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-width="50" d="M350 110 l75 0"/>
+                <path stroke="rgb(255, 255, 255)" stroke-linecap="round" stroke-width="50" d="M90 200 l75 0"/>
+<!--Beach Ball-->
+                <circle cx="420" cy="545" r="40" stroke-width="3" fill="white"/>
+                <polygon points="420,545 400,510 439,510" style="fill:red;stroke-width:1;"></polygon>
+                <polygon points="420,545 439,510 460,546" style="fill:orange;stroke-width:1;"></polygon>
+                <polygon points="420,545 460,546 439,580" style="fill:yellow;stroke-width:1;"></polygon>
+                <polygon points="420,545 400,580 439,580" style="fill:green;stroke-width:1;"></polygon>
+                <polygon points="420,545 400,580 380,546" style="fill:blue;stroke-width:1;"></polygon>
+                <polygon points="420,545 400,510 380,546" style="fill:purple;stroke-width:1;"></polygon>
+                <circle cx="420" cy="545" r="10" stroke-width="3" fill="white"/>
+                <circle cx="420" cy="545" r="35" stroke-width="3" stroke="rgb(255,221,125)" stroke-width="4" fill="transparent"/>
+                <circle cx="420" cy="545" r="37" stroke-width="3" stroke="rgb(255,221,125)" stroke-width="4" fill="transparent"/>
+                <circle cx="420" cy="545" r="39" stroke-width="3" stroke="rgb(255,221,125)" stroke-width="4" fill="transparent"/>
+<!--Birds-->
+                <path stroke="black" stroke-width="15" d="M200 300 l30 20"/>
+                <path stroke="black" stroke-linecap="round" stroke-width="15" d="M200 300 l10 6.5"/>
+                <path stroke="black" stroke-width="15" d="M230 320 l30 -20"/>
+                <path stroke="black" stroke-linecap="round" stroke-width="15" d="M230 320 l30 -20"/>
+
+                <path stroke="black" stroke-width="15" d="M440 220 l30 20"/>
+                <path stroke="black" stroke-linecap="round" stroke-width="15" d="M440 220 l10 6.5"/>
+                <path stroke="black" stroke-width="15" d="M470 240 l30 -20"/>
+                <path stroke="black" stroke-linecap="round" stroke-width="15" d="M470 240 l30 -20"/>
+            </svg>
+        </div>
+    </body>
+</html>
